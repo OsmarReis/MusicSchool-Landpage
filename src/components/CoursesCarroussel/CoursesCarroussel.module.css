@@ -1,0 +1,5 @@
+.carrousselLayout{
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+.actionButton{
+  background-color: #FF9200;
+  color: white;
+
+  width: 384px;
+  font-size: 36px;
+  font-weight: 600;
+
+  padding: 16px 0;
+
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}

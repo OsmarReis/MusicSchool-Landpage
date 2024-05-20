@@ -1,0 +1,16 @@
+.courseCardContainer{
+  width: 490px;
+  height: 490px;
+  margin-bottom: 120px;
+}
+
+.courseCardContainer h1{
+  color: white;
+  font-size: 36px;
+  position: absolute;
+}
+
+.courseCardLayout{
+  color: white;
+}
+
