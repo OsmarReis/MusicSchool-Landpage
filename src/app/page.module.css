@@ -1,3 +1,100 @@
 .main {
+  width: 100%;
+}
+
+.main section{
+  width: 100%;
+}
+
+.bgImg{
+  z-index: -5;
+}
+
+.homeSection{
+  height: 100vh;
+
+  padding: 0 120px;
+  color: white;
+}
+
+.homeSection > h1{
+  font-size: 60px;
+}
+
+.homeSection span{
+  color: #FF9200;
+}
+
+.homeSection ul{
   display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-left: 32px;
+  margin: 60px 0 150px 0;
+
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.aboutSection{
+  display: flex;
+  justify-content: space-between;
+  padding: 120px;
+  gap: 180px;
+  align-items: center;
+  margin: 180px 0;
+}
+
+.aboutSection div{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 600px;
+}
+
+.aboutSection div p{
+  text-align: justify;
+}
+
+.courseSection{
+  background-color: #202020;
+  padding: 100px 0;
+}
+
+.courseSection h1{
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.contactSection{
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 120px;
+}
+
+.contactSection div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactSection div h1{
+  width: 60%;
+  font-size: 32px;
+  text-align: center;
+}
+
+.main footer{
+  height: 48px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
