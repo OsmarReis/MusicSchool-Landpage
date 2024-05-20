@@ -10,6 +10,13 @@ export default function Home() {
     <main id="Home" className={styles.main}>
       <Header/>
       <section id="Home" className={styles.homeSection}>
+        <Image 
+          src="/imgs/bg-1.png"
+          alt="Background image, guitar"
+          className={styles.bgImg}
+          fill={true}
+          priority
+        />
         <h1>Quer aprender música?</h1>
         <h1>Aprenda com os <span>melhores!</span></h1>
         <ul>
@@ -19,13 +26,6 @@ export default function Home() {
         </ul>
 
         <ActionBtn/>
-
-        <Image 
-          src="/imgs/bg-1.png"
-          alt="Background image, guitar"
-          className={styles.bgImg}
-          fill={true}
-        />
       </section>
 
       <section id="About" className={styles.aboutSection}>
