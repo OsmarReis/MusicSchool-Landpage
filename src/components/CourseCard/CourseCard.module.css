@@ -1,16 +1,15 @@
-.courseCardContainer{
-  width: 490px;
-  height: 490px;
-  margin-bottom: 120px;
+.courseCardContainer > h1{
+  font-size: 1rem;
+  position: relative;
+  top: -15%;
+  text-align: center;
 }
 
-.courseCardContainer h1{
-  color: white;
-  font-size: 36px;
-  position: absolute;
-}
+.courseCardImg{
+  width: clamp(15rem, 50vw, 30rem);
+  height: clamp(15rem, 50vw, 30rem);
+  object-fit: cover;
+  overflow: hidden;
 
-.courseCardLayout{
-  color: white;
+  border-radius: 0.5rem;
 }
-

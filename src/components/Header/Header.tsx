@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Header.module.css"
+import LoginBtn from "../LoginBtn/LoginBtn";
 
 export default function Header() {
   return(
@@ -23,15 +24,7 @@ export default function Header() {
         <a href="#Contact">Contato</a>
       </nav>
 
-        <a href="#" className={styles.loginSection}>
-        Já sou aluno!
-        <Image
-          src="/login.svg"
-          alt="User login"
-          width={24}
-          height={24}
-        />
-        </a>
+      <LoginBtn />
     </header>
   )
 }

@@ -4,11 +4,14 @@ import styles from "./page.module.css";
 import ActionBtn from "@/components/ActionBtn/ActionBtn";
 import CoursesCarroussel from "@/components/CoursesCarroussel/CoursesCarroussel";
 import Form from "@/components/Form/Form";
+import HeaderMobile from "@/components/HeaderMobile/HeaderMobile";
 
 export default function Home() {
   return (
     <main id="Home" className={styles.main}>
-      <Header/>
+      {/* <Header/> */}
+      <HeaderMobile />
+      
       <section id="Home" className={styles.homeSection}>
         <Image 
           src="/imgs/bg-1.png"
@@ -33,8 +36,8 @@ export default function Home() {
           src="/imgs/img-2.png"
           alt="A Sheet Music Book"
           className={styles.aboutImg}
-          width={600}
-          height={350}
+          width={256}
+          height={171}
         />
 
         <div>
@@ -54,8 +57,9 @@ export default function Home() {
           <Image 
             src="/imgs/img-3.png"
             alt="Class Students"
-            width={600}
-            height={450}
+            className={styles.aboutImg}
+            width={256}
+            height={171}
           />
           <h1>Faça parte dessa turma você também!</h1>
         </div>
@@ -63,7 +67,7 @@ export default function Home() {
         <Form />
       </section>
 
-      <footer> <span>&copy;</span> Osmar Reis 2024</footer>
+      <footer><span>&copy; Osmar Reis 2024</span></footer>
     </main>
   );
 }

@@ -5,21 +5,22 @@ export default function Form() {
     <form className={styles.formContainer}>
       <div>
         
-        <label>
+        <label htmlFor="name">
           Nome 
-          <input />
+          <input id="name" type="text" />
         </label>
         
         
-        <label>
+        <label htmlFor="email">
           Email 
-          <input />
+          <input id="email" type="email"/>
         </label>
         
       </div>
-      <label>
+
+      <label htmlFor="message">
         Deixe uma mensagem para gente! 
-        <textarea></textarea>
+        <textarea id="message" rows={20}></textarea>
       </label>
 
       <button>Enviar</button>

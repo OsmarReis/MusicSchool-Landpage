@@ -1,5 +1,6 @@
 .carrousselLayout{
   display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow: scroll;
+  padding: 0 clamp(3rem, 10%, 8rem);
 }

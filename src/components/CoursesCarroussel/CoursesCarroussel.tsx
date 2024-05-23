@@ -28,9 +28,9 @@ export default function CoursesCarroussel(){
   return(
     <div className={styles.carrousselLayout}>
       <CourseCard 
-        name="Violão"
+        name="Canto"
         altText="Aulas de violão"
-        src="/imgs/Guitar.png"
+        src="/imgs/Sing.png"
       />
       <CourseCard 
         name="Violão"
@@ -38,14 +38,14 @@ export default function CoursesCarroussel(){
         src="/imgs/Guitar.png"
       />
       <CourseCard 
-        name="Violão"
+        name="Guitarra"
         altText="Aulas de violão"
-        src="/imgs/Guitar.png"
+        src="/imgs/E-guitar.png"
       />
       <CourseCard 
-        name="Violão"
+        name="Baixo"
         altText="Aulas de violão"
-        src="/imgs/Guitar.png"
+        src="/imgs/Bass.png"
       />
     </div>
   )

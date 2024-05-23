@@ -11,14 +11,14 @@ export default function CourseCard({name, src, altText}: ICourseCardLayout){
   return(
     <div className={styles.courseCardContainer}>
 
-      <h1>{name}</h1>
       <Image 
         src={src}
         alt={altText}
-        className={styles.courseCardLayout}
-        width={490}
-        height={490}
-      />
+        className={styles.courseCardImg}
+        width={240}
+        height={240}
+        />
+        <h1>{name}</h1>
     </div>
   )
 }
