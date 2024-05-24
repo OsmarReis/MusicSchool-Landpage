@@ -1,17 +1,65 @@
+'use client'
+
 import Image from "next/image";
 import styles from "./Header.module.css"
-import LoginBtn from "../LoginBtn/LoginBtn";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  return(
-    <header className={styles.header}>
+  const [responsive, setResponsive] = useState<Boolean | undefined>(undefined)
+
+  useEffect(() => {
+    const updateResponsive = () => {
+      setResponsive(window.innerWidth < 796 ? true : false)
+    }
+
+    updateResponsive()
+    window.addEventListener('resize', updateResponsive)
+    return () => {
+      window.removeEventListener('resize', updateResponsive)
+    }
+  }, [])
+
+  return responsive !== undefined ? (
+    responsive ? (
+      <header className={styles.header}>
+     <Image
+     src="/menu-icon.svg"
+     alt="Menu"
+     className={styles.retractableMenu}
+     width={24}
+     height={24}
+   />
+
+   <div className={styles.contentTitle}>
+     <Image
+       src="/logo.svg"
+       alt="Guitar Logo"
+       className={styles.logoIcon}
+       width={24}
+       height={24}
+     />
+     <h1>MusicaUni</h1>
+   </div>
+
+   <a href="#" className={styles.loginSection}>
+     <Image
+       src="/login.svg"
+       alt="User login"
+       className={styles.loginIcon}
+       width={24}
+       height={24}
+     />
+   </a>
+ </header>
+    ) : (
+      <header className={styles.header}>
       <div className={styles.contentTitle}>
       <Image
               src="/logo.svg"
               alt="Guitar Logo"
               className={styles.logoIcon}
-              width={40}
-              height={40}
+              width={24}
+              height={24}
               priority
       />
       <h1>MusicaUni</h1>
@@ -24,7 +72,48 @@ export default function Header() {
         <a href="#Contact">Contato</a>
       </nav>
 
-      <LoginBtn />
+      <a href="#" className={styles.loginSection}>
+         <Image
+           src="/login.svg"
+           alt="User login"
+           className={styles.loginIcon}
+           width={24}
+           height={24}
+         />
+     </a>
     </header>
-  )
+    )
+  ) : null
+
+
+    //<header className={styles.header}>
+//     <Image
+//     src="/menu-icon.svg"
+//     alt="Menu"
+//     className={styles.retractableMenu}
+//     width={24}
+//     height={24}
+//   />
+
+//   <div className={styles.contentTitle}>
+//     <Image
+//       src="/logo.svg"
+//       alt="Guitar Logo"
+//       className={styles.logoIcon}
+//       width={24}
+//       height={24}
+//     />
+//     <h1>MusicaUni</h1>
+//   </div>
+
+//   <a href="#" className={styles.loginSection}>
+//     <Image
+//       src="/login.svg"
+//       alt="User login"
+//       className={styles.loginIcon}
+//       width={24}
+//       height={24}
+//     />
+//   </a>
+// </header>
 }

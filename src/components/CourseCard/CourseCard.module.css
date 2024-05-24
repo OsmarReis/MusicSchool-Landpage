@@ -6,8 +6,8 @@
 }
 
 .courseCardImg{
-  width: clamp(15rem, 50vw, 30rem);
-  height: clamp(15rem, 50vw, 30rem);
+  width: clamp(10rem, 20vw, 15rem);
+  height: clamp(25rem, 20vw, 30rem);
   object-fit: cover;
   overflow: hidden;
 

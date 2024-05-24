@@ -2,12 +2,12 @@
   z-index: -5;
   object-fit: cover;
   overflow: hidden;
-  position: absolute;
 }
 
 .main {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .main section{
@@ -23,13 +23,22 @@
   flex-direction: column;
 
   justify-content: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.homeSection span{
+.homeSection > h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.homeSection > h1 > span{
   color: #FF9200;
 }
 
-.homeSection ul{
+.homeSection > ul{
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -40,19 +49,21 @@
 
 .aboutSection{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 8rem clamp(3rem, 10%, 8rem);
-  gap: 4rem;
+  gap: clamp(4rem, 10vw, 10rem);
+
 }
 
 .aboutImg{
-  width: clamp(15rem, 50vw, 40rem);
-  height: clamp(10rem, 30vw, 26.5rem);
+  width: clamp(15rem, 50vw, 25rem);
+  height: clamp(10rem, 30vw, 20rem);
   object-fit:cover;
   overflow: hidden;
 
-  border-radius: 8px;
-  margin: 0 auto;
+  border-radius: 0.5rem;
 }
 
 .aboutSection > div{
@@ -89,7 +100,9 @@
   display: flex;
   flex-direction: column;
   padding: 4rem clamp(3rem, 10%, 8rem);
-  gap: 4rem;
+  gap: clamp(4rem, 10vw, 10rem);
+  justify-content: center;
+  align-items: center;
 }
 
 .contactSection > div{
@@ -100,13 +113,13 @@
   gap: 0.25rem;
 }
 
-.contactSection > div h1{
+.contactSection > div > h1{
   font-size: 1rem;
   width: 60%;
   text-align: center;
 }
 
-.main footer{
+.main > footer{
   height: 2.5rem;
   background-color: #202020;
   color: white;
@@ -116,86 +129,42 @@
 
 @media (min-width: 1080px) {
   
-  .homeSection{
-    height: 100vh;
-  
-    padding: 0 120px;
-    color: white;
-  }
-  
-  .homeSection > h1{
-    font-size: 60px;
-  }
-  
-  .homeSection span{
-    color: #FF9200;
-  }
-  
-  .homeSection ul{
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    padding-left: 32px;
-    margin: 60px 0 150px 0;
-  
-    font-size: 24px;
-    font-weight: 100;
-  }
-  
   .aboutSection{
     display: flex;
-    justify-content: space-between;
-    padding: 120px;
-    gap: 180px;
+    flex-direction: row;
     align-items: center;
-    margin: 180px 0;
   }
-  
-  .aboutSection div{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  
-    width: 600px;
+
+  .aboutSection > div{
+    width: clamp(15rem, 50vw, 30rem);
+    padding: 0.5rem 0;
   }
-  
-  .aboutSection div p{
-    text-align: justify;
-  }
-  
-  .courseSection{
-    background-color: #202020;
-    padding: 100px 0;
-  }
-  
-  .courseSection h1{
-    color: white;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-  
+
   .contactSection{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* .contactSection{
     display: flex;
     justify-content: space-between;
     padding: 100px 120px;
-  }
+  } */
   
-  .contactSection div{
+  /* .contactSection > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
+  } */
   
-  .contactSection div h1{
+  /* .contactSection div h1{
     width: 60%;
     font-size: 32px;
     text-align: center;
-  }
+  } */
   
-  .main footer{
+  /* .main footer{
     height: 48px;
     background-color: #202020;
     color: white;
@@ -203,5 +172,5 @@
     gap: 8px;
     justify-content: center;
     align-items: center;
-  }
+  } */
 }

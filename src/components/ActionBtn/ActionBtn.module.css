@@ -2,7 +2,7 @@
   background-color: #FF9200;
   color: white;
 
-  width: clamp(10rem, 50vw, 20rem);
+  width: clamp(10rem, 20vw, 20rem);
   font-size: 1rem;
   font-weight: 600;
   font-family: Roboto, 'sans-serif';
@@ -17,24 +17,7 @@
 .actionButton:hover{
   color:#FF9200;
   background-color: white;
+  border: 1px solid #FF9200;
 
   transition: 300ms;
-}
-
-
-@media (min-width:1080px){
-  .actionButton{
-    background-color: #FF9200;
-    color: white;
-  
-    width: 384px;
-    font-size: 36px;
-    font-weight: 600;
-  
-    padding: 16px 0;
-  
-    border-radius: 16px;
-    border: none;
-    cursor: pointer;
-  }
 }

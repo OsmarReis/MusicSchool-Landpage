@@ -1,107 +1,60 @@
-.formContainer{
-  width: clamp(20rem, 100%, 30rem);
-  height: fit-content;
-  background-color: #FAFAFA;
-  padding: 1.5rem;
-
-  font-size: 0.875rem;
-  border-radius: 0.5rem;
-  border: 1px solid #EAEAEA;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.formContainer > div{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.formContainer label{
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.formContainer input, .formContainer textarea{
-  border-radius: 0.25rem;
-  border: 1px solid #EAEAEA;
-}
-
-.formContainer input{
-  height: 1.5rem;
-}
-
-.formContainer textarea{
-  resize: none;
-}
-
-.formContainer button{
-  height: 3rem;
-  border-radius: 0.25rem;
-  border: none;
-  font-size: 1.5rem;
-  font-family: Roboto, 'sans-serif';
-  font-weight: 600;
-  color: white;
-  background-color: #FF9200;
-}
-
-
-@media (min-width:1080px){
   .formContainer{
-    width: 650px;
-    height: 590px;
+    width: clamp(20rem, 100%, 30rem);
+    height: fit-content;
     background-color: #FAFAFA;
-    padding: 40px;
+    padding: 1.5rem;
   
-    font-size: 24px;
-    border-radius: 8px;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
     border: 1px solid #EAEAEA;
-  }
   
-  .formContainer div{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .formContainer div label{
-    width: 100%;
-  }
-  
-  .formContainer label{
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 1.5rem;
   }
   
-  .formContainer input{
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
+  .formContainer  div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .formContainer  label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .formContainer input, .formContainer textarea{
+    border-radius: 0.25rem;
     border: 1px solid #EAEAEA;
   }
   
-  .formContainer textarea{
-    width: 100%;
-    height: 300px;
-    border-radius: 8px;
-    border: 1px solid #EAEAEA;
+  .formContainer  input{
+    padding-left: 0.25rem;
+    height: 1.5rem;
+  }
+  
+  .formContainer  textarea{
+    padding: 0.25rem;
     resize: none;
   }
   
-  .formContainer button{
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
+  .formContainer  button{
+    height: 3rem;
+    border-radius: 0.25rem;
     border: none;
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-family: Roboto, 'sans-serif';
     font-weight: 600;
     color: white;
     background-color: #FF9200;
-    margin-top: 40px;
+    cursor: pointer;
   }
-}
+
+  .formContainer  button:hover{
+    color:#FF9200;
+    background-color: white;
+    border: 1px solid #FF9200;
+  
+    transition: 300ms;
+  }

@@ -4,13 +4,11 @@ import styles from "./page.module.css";
 import ActionBtn from "@/components/ActionBtn/ActionBtn";
 import CoursesCarroussel from "@/components/CoursesCarroussel/CoursesCarroussel";
 import Form from "@/components/Form/Form";
-import HeaderMobile from "@/components/HeaderMobile/HeaderMobile";
 
 export default function Home() {
   return (
     <main id="Home" className={styles.main}>
-      {/* <Header/> */}
-      <HeaderMobile />
+      <Header/>
       
       <section id="Home" className={styles.homeSection}>
         <Image 
