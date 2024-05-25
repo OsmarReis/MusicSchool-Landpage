@@ -1,0 +1,25 @@
+.navBar a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 796px){
+  .navBar{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (min-width: 796px){
+  .navBar{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .navBar a:hover{
+    color: #FF9200;
+    transition: 300ms;
+  }
+}

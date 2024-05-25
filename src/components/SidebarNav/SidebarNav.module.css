@@ -1,0 +1,15 @@
+.sidebarNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 70vw;
+  height: 100vh;
+
+  background-color: #303030;
+  z-index: 9999;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
