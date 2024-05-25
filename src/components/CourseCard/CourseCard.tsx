@@ -17,6 +17,8 @@ export default function CourseCard({name, src, altText}: ICourseCardLayout){
         className={styles.courseCardImg}
         width={240}
         height={240}
+        // fill={true}
+        // sizes="240px, 240px"
         />
         <h1>{name}</h1>
     </div>

@@ -7,13 +7,13 @@ export default function Form() {
         
         <label htmlFor="name">
           Nome 
-          <input id="name" type="text" />
+          <input id="name" type="text" autoComplete="name"/>
         </label>
         
         
         <label htmlFor="email">
           Email 
-          <input id="email" type="email"/>
+          <input id="email" type="email" autoComplete="off"/>
         </label>
         
       </div>

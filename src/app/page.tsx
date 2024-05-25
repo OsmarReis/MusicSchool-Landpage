@@ -7,7 +7,7 @@ import Form from "@/components/Form/Form";
 
 export default function Home() {
   return (
-    <main id="Home" className={styles.main}>
+    <main className={styles.main}>
       <Header/>
       
       <section id="Home" className={styles.homeSection}>

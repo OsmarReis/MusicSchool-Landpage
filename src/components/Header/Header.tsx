@@ -3,15 +3,19 @@
 import Image from "next/image";
 import styles from "./Header.module.css"
 import { useEffect, useState } from "react";
+import NavBar from "../NavBar/NavBar";
+import SidebarNav from "../SidebarNav/SidebarNav";
+import LogoIcon from "../LogoIcon/LogoIcon";
 
 export default function Header() {
-  const [responsive, setResponsive] = useState<Boolean | undefined>(undefined)
+  const [responsive, setResponsive] = useState<Boolean | undefined>(undefined);
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
 
   useEffect(() => {
+    console.log("Olá");
     const updateResponsive = () => {
       setResponsive(window.innerWidth < 796 ? true : false)
     }
-
     updateResponsive()
     window.addEventListener('resize', updateResponsive)
     return () => {
@@ -20,7 +24,9 @@ export default function Header() {
   }, [])
 
   return responsive !== undefined ? (
-    responsive ? (
+    responsive ? ( isOpen ? (
+      <SidebarNav />
+    ) : (
       <header className={styles.header}>
      <Image
      src="/menu-icon.svg"
@@ -30,16 +36,7 @@ export default function Header() {
      height={24}
    />
 
-   <div className={styles.contentTitle}>
-     <Image
-       src="/logo.svg"
-       alt="Guitar Logo"
-       className={styles.logoIcon}
-       width={24}
-       height={24}
-     />
-     <h1>MusicaUni</h1>
-   </div>
+   <LogoIcon />
 
    <a href="#" className={styles.loginSection}>
      <Image
@@ -51,26 +48,13 @@ export default function Header() {
      />
    </a>
  </header>
+    )
+
     ) : (
       <header className={styles.header}>
-      <div className={styles.contentTitle}>
-      <Image
-              src="/logo.svg"
-              alt="Guitar Logo"
-              className={styles.logoIcon}
-              width={24}
-              height={24}
-              priority
-      />
-      <h1>MusicaUni</h1>
-      </div>
+      <LogoIcon />
 
-      <nav className={styles.navBar}>
-        <a href="#Home">Home</a>
-        <a href="#About">Sobre nós</a>
-        <a href="#Courses">Cursos</a>
-        <a href="#Contact">Contato</a>
-      </nav>
+      <NavBar />
 
       <a href="#" className={styles.loginSection}>
          <Image
@@ -84,36 +68,4 @@ export default function Header() {
     </header>
     )
   ) : null
-
-
-    //<header className={styles.header}>
-//     <Image
-//     src="/menu-icon.svg"
-//     alt="Menu"
-//     className={styles.retractableMenu}
-//     width={24}
-//     height={24}
-//   />
-
-//   <div className={styles.contentTitle}>
-//     <Image
-//       src="/logo.svg"
-//       alt="Guitar Logo"
-//       className={styles.logoIcon}
-//       width={24}
-//       height={24}
-//     />
-//     <h1>MusicaUni</h1>
-//   </div>
-
-//   <a href="#" className={styles.loginSection}>
-//     <Image
-//       src="/login.svg"
-//       alt="User login"
-//       className={styles.loginIcon}
-//       width={24}
-//       height={24}
-//     />
-//   </a>
-// </header>
 }
