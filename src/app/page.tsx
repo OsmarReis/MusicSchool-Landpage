@@ -4,6 +4,9 @@ import styles from "./page.module.css";
 import ActionBtn from "@/components/ActionBtn/ActionBtn";
 import CoursesCarroussel from "@/components/CoursesCarroussel/CoursesCarroussel";
 import Form from "@/components/Form/Form";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
 
 export default function Home() {
   return (
@@ -30,15 +33,16 @@ export default function Home() {
       </section>
 
       <section id="About" className={styles.aboutSection}>
+        <div className={styles.aboutImgContainer}>
         <Image
           src="/imgs/img-2.png"
           alt="A Sheet Music Book"
           className={styles.aboutImg}
-          width={256}
-          height={171}
+          fill={true}
         />
+        </div>
 
-        <div>
+        <div className={styles.aboutDescContainer}>
         <h1>Somos a MusicaUni</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id rhoncus felis. Donec molestie rutrum libero non efficitur. Maecenas malesuada efficitur enim, sed fermentum augue. Etiam quis elit vel nulla varius malesuada. Curabitur accumsan tellus odio, ac dignissim nulla imperdiet in. Praesent sed nisl mollis, facilisis eros sed, luctus magna. Duis aliquam in nibh cursus malesuada. Nam eu accumsan risus. Fusce quis nisl sed neque tristique tincidunt. Aliquam quam nunc, dictum in lectus ut, sagittis malesuada velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id rhoncus felis. Donec molestie rutrum libero non efficitur. Maecenas malesuada efficitur enim, sed fermentum augue. Etiam quis elit vel nulla varius malesuada. Curabitur accumsan tellus odio, ac dignissim nulla imperdiet in. Praesent sed nisl mollis, facilisis eros sed, luctus magna. Duis aliquam in nibh cursus malesuada. Nam eu accumsan risus. Fusce quis nisl sed neque tristique tincidunt. Aliquam quam nunc, dictum in lectus ut, sagittis malesuada velit.</p>
         </div>
@@ -50,16 +54,27 @@ export default function Home() {
       </section>
 
       <section id="Contact" className={styles.contactSection}>
-        <div>
-          <h1>Entre em contato!</h1>
-          <Image 
-            src="/imgs/img-3.png"
-            alt="Class Students"
-            className={styles.aboutImg}
-            width={256}
-            height={171}
-          />
+        <div className={styles.contactSectionContainer}>
+          <div className={styles.contactImgContainer}>
+        <Image
+          src="/imgs/img-3.jpeg"
+          alt="A Sheet Music Book"
+          className={styles.contactImg}
+          fill={true}
+        />
+        </div>
           <h1>Faça parte dessa turma você também!</h1>
+          <ul className={styles.socialList}>
+            <li>
+              <XIcon className={styles.iconItem}/>
+            </li>
+            <li>
+              <InstagramIcon className={styles.iconItem}/>
+            </li>
+            <li>
+              <FacebookIcon className={styles.iconItem}/>
+            </li>
+          </ul>
         </div>
 
         <Form />
