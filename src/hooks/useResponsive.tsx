@@ -6,7 +6,6 @@ export function useResponsive(width:number) {
   const [responsive, setResponsive] = useState<Boolean | undefined>(undefined);
 
   useEffect(() => {
-    console.log("Olá");
     const updateResponsive = () => {
       setResponsive(window.innerWidth < width ? true : false)
     }
