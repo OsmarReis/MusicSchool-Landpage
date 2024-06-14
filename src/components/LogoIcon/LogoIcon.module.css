@@ -12,7 +12,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   gap: min(0.5rem, 1rem);
 }
 }
