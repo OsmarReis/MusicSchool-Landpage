@@ -11,8 +11,9 @@ export default function CarouselItem({ title, altText, imgUrl }: ICarouselItem) 
           alt={altText}
           className={styles.carouselImg}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
         />
-      
+        <h1>{title}</h1>
     </div>
   )
 }

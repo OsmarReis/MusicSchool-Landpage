@@ -34,7 +34,7 @@ export default function Carousel({ data }: {data: ICarouselItem[]}) {
     //   </div>
     //   <h1>{title}</h1>
     // </div>
-    <div>
+    <div className={styles.carouselTopContainerWraper}>
         <div className={styles.carouselTopContainer}>
             <div ref={carouselRef}
                 style={{

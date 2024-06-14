@@ -43,6 +43,7 @@
 
 .loginIcon{
 color: #FFFFFF;
+cursor: pointer;
 }
 
 .loginIcon:hover{

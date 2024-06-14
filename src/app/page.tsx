@@ -39,6 +39,7 @@ export default function Home() {
           alt="A Sheet Music Book"
           className={styles.aboutImg}
           fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
         />
         </div>
 
@@ -61,9 +62,10 @@ export default function Home() {
           alt="A Sheet Music Book"
           className={styles.contactImg}
           fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
         />
         </div>
-          <h1>Faça parte dessa turma você também!</h1>
+          <h1>Faça parte de nossa música você também!</h1>
           <ul className={styles.socialList}>
             <li>
               <XIcon className={styles.iconItem}/>
